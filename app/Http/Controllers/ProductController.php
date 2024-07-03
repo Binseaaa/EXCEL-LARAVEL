@@ -11,10 +11,10 @@ class ProductController extends Controller
     public function index() {
         $products = Product::all();
 
-        return view('welcome', ['products' => $products]);
+        return view('products', ['products' => $products]);
     }
 
     public function exportExcel() {
-        return Excel::download(new UsersDataExport, 'Products-list.xlsx');
+        return Excel::download(new UsersDataExport, 'products.xlsx');
     }
 }

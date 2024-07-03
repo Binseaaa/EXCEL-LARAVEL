@@ -19,7 +19,7 @@ class UsersDataExport implements FromView, ShouldAutoSize
 
     public function view() : View
     {
-        return view('welcome', [
+        return view('products', [
             'products' => $this -> products
         ]);
     }
